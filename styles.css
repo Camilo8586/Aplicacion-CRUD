@@ -22,11 +22,10 @@ header h1{
 .contenedor .productos{
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr ;
-    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap:30px;
     grid-row-gap: 30px;
-    width: 60%;
+    width: 100%;
     transition: .3s;
 }
 .contenedor .productos .item{
@@ -72,6 +71,116 @@ header h1{
     transition: .3s;
 }
 
-.total-carrito {
-    margin-top: 10px;
+.carrito .header-carrito{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    color: white;
+    text-align: center;
+    padding: 30px 0px;
 }
+.carrito .item-carrito{
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid #000000;
+    height: 110px;
+    padding: 20px;
+}
+.carrito .item-carrito img{
+    margin-right: 20px;
+
+}
+.carrito .item-carrito .nombre-item-carrito{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.carrito .item-carrito .selector-cantidad{
+    display: inline-block;
+    margin-right: 25px;
+}
+.carrito .item-carrito .carrito-item-cantidad {
+    border: none;
+    font-size: 18px;
+    background: transparent;
+    display: inline-block;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+}
+.carrito .item-carrito .selector-cantidad i{
+    font-size: 18px;
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+
+    cursor: pointer;
+}
+.carrito .item-carrito .carrito-precio{
+    font-weight: bold;
+    display: inline-block;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.carrito .item-carrito .btn-eliminar{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: #000000;
+    width: 40px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid #000000;
+    cursor: pointer;
+    display: block;
+    background: transparent;
+    z-index: 20;
+}
+.carrito .item-carrito .btn-eliminar i{
+    pointer-events: none;
+
+}
+.total-carrito{
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+    padding: 20px;
+}
+.total-carrito .fila{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    margin: 5px;
+    margin-bottom: 10px;
+}
+.total-carrito .pago{
+    display: block;
+    width: 100%;
+    border: none;
+    background: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+.total-carrito .pago:hover{
+    scale: 1.05;
+}
+@media screen and (max-width: 850px) {
+    .contenedor {
+      display: block;
+    }
+    .contenedor-items{
+        width: 100% !important;
+    }
+    .carrito{
+        width: 100%;
+    }
+  }
