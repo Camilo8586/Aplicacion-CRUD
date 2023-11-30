@@ -13,7 +13,6 @@ header h1{
 }
 .contenedor{
     max-width: 1200px;
-    padding: 10px;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -30,7 +29,6 @@ header h1{
 }
 .contenedor .productos .item{
     max-width: 200px;
-    padding: 10px;
     margin: auto;
     border: 1px solid #000000;
     border-radius: 10px;
@@ -42,10 +40,9 @@ header h1{
     scale: 1.05;
 }
 .productos .item .img-producto{
-    width: 100px;
-    display: block;
-    text-align: center;
-    margin: 20px;
+    width: 100%;
+    height: 100%;
+
 }
 .productos .item .nombre-producto{
     display: block;
@@ -69,6 +66,8 @@ header h1{
     position: sticky !important;
     top: 0;
     transition: .3s;
+    opacity: 0;
+    margin-right: -100%;
 }
 
 .carrito .header-carrito{
@@ -82,7 +81,6 @@ header h1{
     align-items: center;
     position: relative;
     border-bottom: 1px solid #000000;
-    height: 110px;
     padding: 20px;
 }
 .carrito .item-carrito img{
